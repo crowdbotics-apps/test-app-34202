@@ -15,14 +15,31 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='GenerateModels',
+            name="GenerateModels",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.TextField()),
-                ('description', models.TextField(blank=True, null=True)),
-                ('date_created', models.DateTimeField(blank=True, null=True)),
-                ('date_modified', models.DateTimeField(blank=True, null=True)),
-                ('user_created', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='generatemodels_user_created', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.TextField()),
+                ("description", models.TextField(blank=True, null=True)),
+                ("date_created", models.DateTimeField(blank=True, null=True)),
+                ("date_modified", models.DateTimeField(blank=True, null=True)),
+                (
+                    "user_created",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="generatemodels_user_created",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]

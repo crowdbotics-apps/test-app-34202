@@ -66,6 +66,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     "crowdbotic_lite",
+    "subscription_plan",
+    "subscriptions",
 ]
 LOCAL_APPS = [
     "home",
